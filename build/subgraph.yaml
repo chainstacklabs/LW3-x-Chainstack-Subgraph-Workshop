@@ -3,7 +3,7 @@ description: A subgraph to index data on the Bored Apes contract
 features:
   - ipfsOnEthereumContracts
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: BoredApeYachtClub
@@ -22,8 +22,8 @@ dataSources:
         - Property
       abis:
         - name: BoredApeYachtClub
-          file: ./abis/BoredApeYachtClub.json
+          file: BoredApeYachtClub/abis/BoredApeYachtClub.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/bored-ape-yacht-club.ts
+      file: BoredApeYachtClub/BoredApeYachtClub.wasm
