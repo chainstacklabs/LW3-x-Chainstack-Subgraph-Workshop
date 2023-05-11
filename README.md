@@ -9,6 +9,11 @@ Before anything else, make sure you have the graph-cli installed in your system.
 ```bash
 npm install -g @graphprotocol/graph-cli
 ```
+OR
+
+```bash
+yarn global add @graphprotocol/graph-cli
+```
 To check if the CLI was installed correctly, run this command in your terminal:
 
 ```shell
