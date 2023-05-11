@@ -78,6 +78,11 @@ type Property @entity {
   mouth: String
 }
 ```
+We define 3 entities in the schema file:
+
+1. The Transfer entity keeps a record of all the transactions that involved the transfer of a bored ape NFT.
+2. The BoredApe entity keeps a record of all the bored ape NFTs themselves. We record the original owner and the current owner amongst other data points. Please note that some fields like the current owner will keep on changing everytime the NFT is transferred.
+3. The Property entity stores the metatadata for each Ape.
 
 ## subgraph.yaml
 
@@ -114,6 +119,7 @@ dataSources:
           handler: handleTransfer
       file: ./src/bored-ape-yacht-club.ts
 ```
+The YAML file is a collection of nested key value pairs that keeps a store of some crucial metadata about our subgraph. It is important to keep it updated.
 
 ## Mapping functions to schemas
 
@@ -268,5 +274,3 @@ const ipfshash = "QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq"
 
   property.save();
 ```
-
-
